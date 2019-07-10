@@ -6,5 +6,4 @@ app.on('ready', () => {
         width: 600,
         height: 400
     })
-    mainWindow.loadURL('https://pt.wikipedia.com');
 })
