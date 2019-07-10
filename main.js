@@ -14,7 +14,7 @@ app.on('window-all-closed', () => {
 });
 
 let sobreWindow = null;
-ipcMain.on('open-janela-sobre', () => {
+ipcMain.on('abrir-janela-sobre', () => {
     if (sobreWindow == null) {
         sobreWindow = new BrowserWindow({
             width: 300,
@@ -29,6 +29,6 @@ ipcMain.on('open-janela-sobre', () => {
     sobreWindow.loadURL(`file://${__dirname}/app/sobre.html`);
 });
 
-ipcMain.on('close-janela-sobre', () => {
+ipcMain.on('fechar-janela-sobre', () => {
     sobreWindow.close();
 })

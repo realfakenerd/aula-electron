@@ -1,22 +1,16 @@
 const { ipcRenderer, shell } = require('electron');
 const node = require('process');
 
-let $ = document.querySelector.bind(document);
+let linkFechar = document.querySelector('#link-fechar');
+let verElectron = document.querySelector('#ver-electron');
+let linkGit = document.querySelector('#link-github');
 
-let linkFechar = $('#link-fechar');
-
-linkFechar.addEventListener('click', () => {
-    ipcRenderer.send('close-janela-sobre')
+linkFechar.addEventListener('click', function () {
+    ipcRenderer.send('fechar-janela-sobre')
 });
-
-let verElectron = $('#ver-electron');
-
-window.onload = () => {
+window.onload = function () {
     verElectron.textContent = process.versions.electron;
 }
-
-let linkGit = $('#link-github');
-
-linkGit.addEventListener('click', () => {
+linkGit.addEventListener('click', function () {
     shell.openExternal('https://google.com');
 })

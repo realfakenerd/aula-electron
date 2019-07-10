@@ -1,9 +1,7 @@
 const { ipcRenderer } = require('electron');
 
-let $ = document.querySelector.bind(document);
+let linkSobre = document.querySelector('#link-sobre');
 
-let linkSobre = $('#link-sobre');
-
-linkSobre.addEventListener('click', ()=>{
-    ipcRenderer.send('open-janela-sobre');
+linkSobre.addEventListener('click', function(){
+    ipcRenderer.send('abrir-janela-sobre');
 })
