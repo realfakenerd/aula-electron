@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/realfakenerd/aula-electron/issues"
   },
-  "homepage": "https://github.com/realfakenerd/aula-electron#readme"
+  "homepage": "https://github.com/realfakenerd/aula-electron#readme",
+  "dependencies": {
+    "electron": "^1.4.15"
+  }
 }
