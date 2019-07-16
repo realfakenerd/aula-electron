@@ -1,16 +1,18 @@
 const { ipcRenderer, shell } = require('electron');
-const node = require('process');
+    const process = require('process');
 
-let linkFechar = document.querySelector('#link-fechar');
-let verElectron = document.querySelector('#ver-electron');
-let linkGit = document.querySelector('#link-github');
+let linkFechar = document.querySelector("#link-fechar");
+let linkTwitter = document.querySelector("#link-twitter");
+let versaoElectron = document.querySelector('#versao-electron');
+
+window.onload = function(){
+    versaoElectron.textContent = process.versions.electron;
+}
 
 linkFechar.addEventListener('click', function () {
-    ipcRenderer.send('fechar-janela-sobre')
-});
-window.onload = function () {
-    verElectron.textContent = process.versions.electron;
-}
-linkGit.addEventListener('click', function () {
-    shell.openExternal('https://google.com');
+    ipcRenderer.send('fechar-janela-sobre');
+})
+
+linkTwitter.addEventListener('click', function () {
+    shell.openExternal("https://www.twitter.com/dquintanilhas");
 })
